@@ -21,7 +21,7 @@ $ npm install -g gistup                       # установка гистап�
 ```
 
 ```bash
-$ cat > ~/.gistup.json <<EOF                  # чтение
+$ cat > ~/.gistup.json <<EOF                  # cat создает файл и записыавет в него токен
 {
   "token": "${GIST_TOKEN}"
 }
