@@ -11,17 +11,17 @@
 ## Tutorial
 
 ```bash
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GIST_TOKEN=<сохраненный_токен>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=<имя_пользователя>   # экспорт гитхаб юзернэйма
+$ export GIST_TOKEN=<сохраненный_токен>       # экспорт гитхаб токена
+$ alias edit=<nano|vi|vim|subl>               # выбор текстового редактора
+```
+
+```bash 
+$ npm install -g gistup                       # установка гистапа
 ```
 
 ```bash
-$ npm install -g gistup
-```
-
-```bash
-$ cat > ~/.gistup.json <<EOF
+$ cat > ~/.gistup.json <<EOF                  # чтение
 {
   "token": "${GIST_TOKEN}"
 }
@@ -30,8 +30,8 @@ EOF
 
 ```bash
 $ cd ~
-$ mkdir -p workspace/labs/projects/
-$ mkdir -p workspace/labs/tasks/
+$ mkdir -p workspace/labs/projects/      # (parents) не выдавать ошибок если существует, создавать родительские каталоги если необходимо
+$ mkdir -p workspace/labs/tasks/  
 $ mkdir -p workspace/labs/reports/
 ```
 
