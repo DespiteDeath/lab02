@@ -23,7 +23,8 @@ $ npm install -g gistup # Устанавливаем пакет gistup -g - па
 ```
 
 ```bash
-$ cat > ~/.gistup.json <<EOF # Создаем, записываем токен в файл
+# Создаем, записываем токен в файл
+$ cat > ~/.gistup.json <<EOF
 {
   "token": "${GIST_TOKEN}"
 }
