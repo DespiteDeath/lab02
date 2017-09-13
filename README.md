@@ -4,24 +4,26 @@
 
 ## Tasks
 
-- [✔] 1. Ознакомиться со ссылками учебного материала
-- [✔] 2. Выполнить инструкцию учебного материала
-- [✔] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
+- [X] 1. Ознакомиться со ссылками учебного материала
+- [X] 2. Выполнить инструкцию учебного материала
+- [X] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
  
 ## Tutorial
 
-```bash
-$ export GITHUB_USERNAME=<имя_пользователя>   # экспорт гитхаб юзернэйма
-$ export GIST_TOKEN=<сохраненный_токен>       # экспорт гитхаб токена
-$ alias edit=<nano|vi|vim|subl>               # выбор текстового редактора
-```
+Block description
 
-```bash 
-$ npm install -g gistup                       # установка гистапа
+```bash
+$ export GITHUB_USERNAME=DespiteDeath # Устанавливаем значение переменной окружения GITHUB_USERNAME
+$ export GIST_TOKEN=6a91288b027fb7bb246aa5d6891d9373e183fac6 # Устанавливаем значение переменной окружения GIST_TOKEN
+$ alias edit=subl # Выбираем текстовый редактор, в котором будем работать
 ```
 
 ```bash
-$ cat > ~/.gistup.json <<EOF                  # cat создает файл и записыавет в него токен
+$ npm install -g gistup # Устанавливаем пакет gistup -g - пакет устонавливается глобально
+```
+
+```bash
+$ cat > ~/.gistup.json <<EOF
 {
   "token": "${GIST_TOKEN}"
 }
@@ -30,21 +32,21 @@ EOF
 
 ```bash
 $ cd ~
-$ mkdir -p workspace/labs/projects/      # (parents) не выдавать ошибок если существует, создавать родительские каталоги если необходимо
-$ mkdir -p workspace/labs/tasks/  
-$ mkdir -p workspace/labs/reports/
+$ mkdir -p workspace/labs/projects/ # Создаем каталоги workspace, labs, projects    - p - не выдавать ошибок если существует, создавать родительские каталоги если необходимо
+$ mkdir -p workspace/labs/tasks/ # Создаем каталог tasks
+$ mkdir -p workspace/labs/reports/ # Создаем каталог reports
 ```
 
 ## Report
 
 ```bash
-$ cd ~/workspace/labs/
-$ export LAB_NUMBER=02
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
-$ mkdir reports/lab${LAB_NUMBER}
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
-$ cd reports/lab${LAB_NUMBER}
-$ edit REPORT.md
+$ cd ~/workspace/labs/ # Меняем директорию на labs
+$ export LAB_NUMBER=02 # Устанавливаем значение переменной окружения LAB_NUMBER
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} # Форкаем себе репозиторий
+$ mkdir reports/lab${LAB_NUMBER} # Создаем каталог lab
+$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md # Копируем README.md в REPORT.md
+$ cd reports/lab${LAB_NUMBER} # Меняем директорию
+$ edit REPORT.md # Редактируем REPORT.md
 $ gistup -m "lab${LAB_NUMBER}"
 ```
 
