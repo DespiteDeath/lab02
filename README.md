@@ -23,7 +23,7 @@ $ npm install -g gistup # Устанавливаем пакет gistup -g - па
 ```
 
 ```bash
-$ cat > ~/.gistup.json <<EOF
+$ cat > ~/.gistup.json <<EOF # Создаем, записываем токен в файл
 {
   "token": "${GIST_TOKEN}"
 }
@@ -31,7 +31,7 @@ EOF
 ```
 
 ```bash
-$ cd ~
+$ cd ~ # Поднимаемся в самое начало папок
 $ mkdir -p workspace/labs/projects/ # Создаем каталоги workspace, labs, projects    - p - не выдавать ошибок если существует, создавать родительские каталоги если необходимо
 $ mkdir -p workspace/labs/tasks/ # Создаем каталог tasks
 $ mkdir -p workspace/labs/reports/ # Создаем каталог reports
